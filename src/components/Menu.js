@@ -1,5 +1,6 @@
 import Navigation from "./Navigation";
 import Product from "./Product";
+import Footer from "./Footer";
 import { Container, Row } from "react-bootstrap";
 import products from "../mocking/products";
 
@@ -16,11 +17,13 @@ const Menu = () => {
                 name={product.name}
                 img={product.img}
                 price={product.price}
+                description={product.description}
               />
             ))}
           </Row>
         </Container>
       </div>
+      <Footer />
     </div>
   );  
 };

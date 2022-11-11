@@ -5,7 +5,6 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Button from "react-bootstrap/Button";
 import logo from "../assets/img/logo.png";
-import cart from "../assets/img/cart.svg"
 
 const Navigation = () => {
   return (
@@ -32,7 +31,7 @@ const Navigation = () => {
             <Button href="signup" variant="dark">
               Registrarse
             </Button>
-            <a href="cart"><img src={cart} alt="Carrito de compra" /></a>
+            <Button href="cart">Carrito</Button>
           </Col>
         </Row>
       </Container>
