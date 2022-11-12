@@ -66,3 +66,11 @@ body {
   width: 60%;
   height: 150px;
 }
+
+.cart .cart-background {
+  color: black;
+  background-color: white;
+  width: 100%;
+  padding: 50px;
+}
+
