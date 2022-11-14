@@ -6,17 +6,18 @@ import CartProduct from "./CartProduct";
 
 const Cart = () => {
   return (
-    <div className="cart">
+    <div>
       <Navigation />
-      <div className="cart-background">
+      <div className="contenedor-uno">
+
         <Row>
+
           {products.map((product) => (
             <CartProduct img={product.img} name={product.name} price={product.price} description={product.description} />
           ))}
-          <Col xs={6} md={4} style={{ fontSize: "20px", fontWeight: "bold", textAlign: "center", border: "1px solid black" }}>
-            2
-          </Col>
+
         </Row>
+
       </div>
       <Footer />
     </div>

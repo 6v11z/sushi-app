@@ -1,69 +1,73 @@
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, ListGroup } from "react-bootstrap";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import { BsInstagram } from "react-icons/bs";
-import { BsFacebook } from "react-icons/bs";
+import { BsWhatsapp, BsInstagram, BsFacebook, BsMap, BsInfoCircle } from "react-icons/bs";
+import { AiOutlineSetting, AiOutlineTeam, AiOutlineContacts, AiOutlinePhone} from "react-icons/ai";
+
+import webpay from "../assets/img/webpay.png";
 
 const Footer = () => {
   return (
+
     <Card className="text-center text-black">
       <Card.Header>Footer</Card.Header>
       <Card.Body>
         <Card.Title>Acerca de</Card.Title>
         <Card.Text>
           <Container>
-            <Row style={{fontSize:"40px", fontWeight:"bold"}}>
-              <Col>Fukusuke Sushi</Col>
+            <Row style={{ fontSize: "40px", fontWeight: "bold" }}>
+              <Col>Fukusuke</Col>
               <Col></Col>
               <Col></Col>
             </Row>
-            <Row style={{fontSize:"20px", fontWeight:"bold"}}>
+
+            <Row style={{ fontSize: "20px", fontWeight: "bold" }}>
               <Col>LINKS</Col>
               <Col>CONTACTO</Col>
               <Col>REDES</Col>
             </Row>
             <Row>
-              <Col>Link1</Col>
-              <Col>Contacto 1</Col>
-              <Col>Instagram</Col>
-            </Row>
-            <Row>
-              <Col>Link2</Col>
-              <Col>Contacto 2</Col>
-              <Col>Facebook</Col>
-            </Row>
-            <Row>
-              <Col>Link3</Col>
-              <Col>Contacto 3</Col>
-              <Col>WhasApp</Col>
-            </Row>
-            <Row>
-              <Col><br></br></Col>
-              <Col><br></br></Col>
-              <Col><br></br></Col>
-            </Row>
-            <Row>
-              <Col>Texto 1</Col>
-              <Col>Texto 2</Col>
+            <Col >
+                <a style={{ paddingBottom: "5px"}} class="nav-link active" href="about"> <BsInfoCircle /> About Us </a>
+                <a style={{ paddingBottom: "5px"}} class="nav-link active" href="/"> <AiOutlineSetting /> Support </a>
+                <a style={{ paddingBottom: "5px"}} class="nav-link active" href="/"><AiOutlineTeam /> Our Team</a>
+                <a style={{ paddingBottom: "5px"}} class="nav-link active" href="contact"><AiOutlineContacts /> Contact Us </a>
+              </Col>
               <Col>
-                <Button><BsInstagram /></Button>
-                <Button><BsFacebook /></Button>
-                <Button><BsInstagram /></Button>
-                <Button><BsFacebook /></Button>
+                <ListGroup.Item style={{ paddingBottom: "5px"}} > <AiOutlinePhone /> +56 9 2279 6608 </ListGroup.Item>
+                <ListGroup.Item style={{ paddingBottom: "5px"}} > <AiOutlinePhone /> +56 9 8692 8402 </ListGroup.Item>
+                <ListGroup.Item style={{ paddingBottom: "5px"}} > <AiOutlinePhone /> +56 9 5644 2907 </ListGroup.Item>
+                <ListGroup.Item style={{ paddingBottom: "5px"}} > <AiOutlinePhone /> +56 9 2279 6608 </ListGroup.Item>
+              </Col>
+              <Col>
+                <a style={{ paddingBottom: "5px"}} class="nav-link active" href="#"> <BsWhatsapp /> Whatsapp </a>
+                <a style={{ paddingBottom: "5px"}} class="nav-link active" href="#"> <BsInstagram /> Instagram </a>
+                <a style={{ paddingBottom: "5px"}} class="nav-link active" href="#"><BsFacebook /> Facebook</a>
+                <a style={{ paddingBottom: "5px"}} class="nav-link active" href="#"><BsMap /> Map </a>
               </Col>
             </Row>
-            <Row>
-              <Col>.</Col>
+            <Row style={{ paddingBottom: "5px", paddingTop: "5px"}} className="align-items-center">
+              <Col>Opcion 1</Col>
+              <Col>Opcion 2</Col>
               <Col>
-                <Container style={{ paddingLeft: 120, paddingRight: 120, paddingBottom: 0 }}>
+                <Button style={{ marginRight: "3px", marginBottom: "3px" }} ><BsInstagram /></Button>
+                <Button style={{ marginRight: "3px", marginBottom: "3px" }} ><BsFacebook /></Button>
+                <Button style={{ marginRight: "3px", marginBottom: "3px" }} ><BsWhatsapp /></Button>
+                <Button style={{ marginRight: "3px", marginBottom: "3px" }} ><BsMap /></Button>
+              </Col>
+            </Row>
+
+            <Row>
+              <Col> </Col>
+              <Col>
+                <Container style={{ maring: 40 }}>
                   <img
-                    className="d-block w-100"
-                    src="https://th.bing.com/th/id/OIP.xROw_0ALkZTMnT094q-U9AHaDZ?pid=ImgDet&rs=1" class="img-thumbnail"
-                    alt="Second slide"
-                  />
+                    className="d-block w-80"
+                    src={webpay} class="img-fluid"
+                    alt="Second slide" />
                 </Container>
               </Col>
-              <Col>.</Col>
+              <Col> </Col>
             </Row>
           </Container>
 

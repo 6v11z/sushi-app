@@ -9,6 +9,9 @@ import Login from "./components/Login";
 import Signup from "./components/Signup";
 import ForgotPassword from "./components/ForgotPassword";
 import Cart from "./components/Cart";
+import Carro from "./components/Carro";
+import NavbarAdmin from "./components/NavbarAdmin";
+import EditarProductos from "./components/EditarProductos";
 
 const App = () => {
   return (
@@ -22,9 +25,14 @@ const App = () => {
         <Route path="signup" element={<Signup />} />
         <Route path="forgot_password" element={<ForgotPassword />} />
         <Route path="cart" element={<Cart />} />
+        <Route path="carro" element={<Carro />} />
+        <Route path="navbar_admin" element={<NavbarAdmin />} />
+        <Route path="editar_producto" element={<EditarProductos />} />
       </Routes>
     </div>
   );
 };
+
+
 
 export default App;
