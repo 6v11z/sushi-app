@@ -75,7 +75,7 @@ body {
 }
 
 .contenedor-uno{
-  background-image: url("C:\Users\fapve\Documents\sushi-app\src\assets\img\background.jpg");
+  background-image: url("./assets/img/background.jpg");
   padding: 2%;
   background-position: center center;
   background-repeat: no-repeat;

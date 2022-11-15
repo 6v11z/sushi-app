@@ -1,23 +1,23 @@
-import { Container, Row, Col, Card, Button, InputGroup, Form } from "react-bootstrap";
+import { Row } from "react-bootstrap";
 import Footer from "./Footer";
 import Navigation from "./Navigation";
-import products from "../mocking/products";
 import CartProduct from "./CartProduct";
 
-const Cart = () => {
+const Cart = ({ cartProducts }) => {
   return (
     <div>
       <Navigation />
       <div className="contenedor-uno">
-
         <Row>
-
-          {products.map((product) => (
-            <CartProduct img={product.img} name={product.name} price={product.price} description={product.description} />
+          {cartProducts.map((cartProduct) => (
+            <CartProduct
+              img={cartProduct.img}
+              name={cartProduct.name}
+              price={cartProduct.price}
+              description={cartProduct.description}
+            />
           ))}
-
         </Row>
-
       </div>
       <Footer />
     </div>

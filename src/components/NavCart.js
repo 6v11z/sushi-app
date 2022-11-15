@@ -1,16 +1,10 @@
-import { useState } from "react";
-import { Row, Col, Button, ListGroup, ButtonGroup } from "react-bootstrap";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Button from "react-bootstrap/Button";
+import ListGroup from "react-bootstrap/ListGroup";
+import ButtonGroup from "react-bootstrap/ButtonGroup";
 
-const CartProduct = ({ img, name, description, price, deleteProduct }) => {
-  const [contador, setContador] = useState(1);
-
-  const reducirCantidad = () => {
-    if (contador === 0) {
-      return;
-    }
-    setContador(contador - 1);
-  };
-
+const NavCart = ({ name, description, price, img }) => {
   return (
     <div
       className="d-flex justify-content-start"
@@ -18,13 +12,13 @@ const CartProduct = ({ img, name, description, price, deleteProduct }) => {
     >
       <div style={{ padding: "6px" }} className="card">
         <div className="row">
-          <div className="col-md-2">
+          <div className="col-md-5">
             <img src={img} alt={name} className="img-fluid" />
           </div>
-          <div className="col-md-10">
+          <div className="col-md-7">
             <h3
               style={{ fontWeight: "bold" }}
-              className="card-title mt-2 mb-0 text-black"
+              className="card-title mt-1 mb-0 text-black"
             >
               {name}
             </h3>
@@ -35,7 +29,10 @@ const CartProduct = ({ img, name, description, price, deleteProduct }) => {
                 </ListGroup.Item>
                 <ListGroup.Item
                   className="lh-1"
-                  style={{ fontSize: "12px", paddingBottom: "1px" }}
+                  style={{
+                    fontSize: "12px",
+                    paddingBottom: "1px",
+                  }}
                 >
                   {description}
                 </ListGroup.Item>
@@ -43,31 +40,37 @@ const CartProduct = ({ img, name, description, price, deleteProduct }) => {
               <Col style={{ paddingRight: "5%", color: "black" }}>
                 <div className="d-grid gap-2 d-md-flex justify-content-md-end">
                   <ListGroup.Item>
-                    <p style={{ fontSize: "20px", fontWeight: "bold" }}>
+                    <p
+                      style={{
+                        fontSize: "20px",
+                        fontWeight: "bold",
+                      }}
+                    >
                       {price}
                     </p>
                   </ListGroup.Item>
                 </div>
                 <div className="d-grid gap-2 d-md-flex justify-content-md-end">
                   <ListGroup.Item
-                    className="mt-1 mb-1 text-black"
-                    style={{ fontSize: "12px", fontWeight: "lighter" }}
+                    className="mt-2 mb-1 text-black"
+                    style={{
+                      fontSize: "12px",
+                      fontWeight: "lighter",
+                    }}
                   >
-                    cantidad:
+                    Cant:
                   </ListGroup.Item>
                   <ListGroup.Item>
+                    {" "}
                     <ButtonGroup size="sm">
-                      <Button onClick={reducirCantidad}>-</Button>
-                      <Button variant="info">{contador}</Button>
-                      <Button onClick={() => setContador(contador + 1)}>
-                        +
-                      </Button>
-                    </ButtonGroup>
+                      <Button>-</Button>
+                      <Button variant="info">0</Button>
+                      <Button>+</Button>
+                    </ButtonGroup>{" "}
                   </ListGroup.Item>
-                  <Button onClick={deleteProduct}>Eliminar</Button>
-                  {/* <a href="carro" className="text-reset" onClick={deleteProduct}>
+                  <a href="/" className="text-reset mt-1">
                     eliminar
-                  </a> */}
+                  </a>
                 </div>
               </Col>
             </Row>
@@ -78,4 +81,4 @@ const CartProduct = ({ img, name, description, price, deleteProduct }) => {
   );
 };
 
-export default CartProduct;
+export default NavCart;

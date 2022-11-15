@@ -1,14 +1,12 @@
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import Form from "react-bootstrap/Form";
-import NavDropdown from "react-bootstrap/NavDropdown";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Button from "react-bootstrap/Button";
 import logo from "../assets/img/logo.png";
 
-const Navigation = () => {
+const Navigation = ({ carrito }) => {
   return (
     <div className="navigation">
       <Container>
@@ -27,8 +25,12 @@ const Navigation = () => {
             </Nav>
           </Col>
           <Col md="auto">
-            <Button href="login" variant="dark"> Iniciar sesión </Button> 
-            <Button className = "mx-2" href="signup" variant="dark"> Registrarse </Button>
+            <Button href="login" variant="dark">
+              Iniciar sesión
+            </Button>
+            <Button className="mx-2" href="signup" variant="dark">
+              Registrarse
+            </Button>
             <Button href="carro"> Carrito </Button>
           </Col>
         </Row>
